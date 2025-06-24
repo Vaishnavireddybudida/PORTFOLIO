@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi | About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            hero: "url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80')"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      @keyframes slideInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .slide-in {
+        animation: slideInLeft 0.6s ease-out both;
+      }
+
+      .link-hover {
+        @apply relative inline-block pb-1;
+      }
+      .link-hover::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-0 transition-all duration-300;
+      }
+      .link-hover:hover::after {
+        @apply w-full;
+      }
+      .link-active::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-full;
+      }
+    }
+
+    body {
+      background-image: theme('backgroundImage.hero');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .backdrop {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(2px);
+    }
+  </style>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="text-white font-sans">
+
+  <!-- NAVIGATION BAR -->
+  <header class="backdrop px-6 md:px-20 py-6">
+    <div class="flex justify-between items-center">
+      <div class="text-xl md:text-2xl font-semibold text-white">
+        Budida Vaishnavi
+      </div>
+      <nav class="flex flex-wrap gap-6 text-lg font-medium">
+        <a href="index.html" onclick="animateAndGo(event, 'index.html')" class="link-hover">Home</a>
+        <a href="about.html" class="link-hover link-active text-yellow-400">About</a>
+        <a href="skills.html" onclick="animateAndGo(event, 'skills.html')" class="link-hover">Skills</a>
+        <a href="projects.html" onclick="animateAndGo(event,'projects.html')" class="link-hover">Projects</a>
+        <a href="resume.html" onclick="animateAndGo(event,'resume.html')" class="link-hover">Resume</a>
+        <a href="contact.html" onclick="animateAndGo(event,'contact.html')" class="link-hover">Contact</a>
+      </nav>
+    </div>
+    <hr class="mt-4 border-gray-500" />
+  </header>
+
+ <!-- ABOUT SECTION -->
+<section class="min-h-screen px-6 md:px-20 pt-2 backdrop flex items-center">
+  <div class="grid md:grid-cols-2 gap-10 slide-in mt-2 max-w-6xl w-full">
+
+   <!-- Left: About Text + Info -->
+<div>
+  <h2 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">About Me</h2>
+  <p class="text-lg text-gray-200 leading-relaxed mb-6">
+    I am Budida Vaishnavi, an aspiring Java Full Stack Developer with a growing interest in AI.  
+    Currently pursuing my B.Tech, I enjoy building web applications using modern technologies like  
+    Spring Boot, React.js, and MySQL. My passion lies in creating user-friendly interfaces  
+    and learning about system design and architecture.
+  </p>
+
+  <!-- Personal Info -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-300 text-base">
+    <p><span class="text-yellow-400 font-semibold">DOB:</span> 02 December 2005</p>
+    <p><span class="text-yellow-400 font-semibold">Website:</span>tunewithvaish.netlify.app</p>
+    <p><span class="text-yellow-400 font-semibold">Phone:</span> +91 81859189197</p>
+    <p><span class="text-yellow-400 font-semibold">City:</span> Hyderabad, India</p>
+    <p><span class="text-yellow-400 font-semibold">Age:</span> 20</p>
+    <p><span class="text-yellow-400 font-semibold">Degree:</span> B.Tech CSE(AI&ML)</p>
+    <p><span class="text-yellow-400 font-semibold">Email:</span> vaishnavireddy818@gmail.com</p>
+    <p><span class="text-yellow-400 font-semibold">Freelance:</span> Available</p>
+  </div>
+</div>
+
+
+    <!-- Right: Square Image -->
+    <div class="flex justify-center md:justify-end items-start">
+      <img src="pass photo.jpg" alt="Vaishnavi Photo"
+        class="w-64 h-64 object-cover rounded-lg border-4 border-yellow-400 shadow-lg" />
+    </div>
+
+   <!-- Internship Note - Full Width -->
+<div class="md:col-span-2 mt-8">
+  <p class="text-gray-200 text-lg leading-relaxed text-center md:text-left">
+    I am currently open to internship opportunities — remote, hybrid, or in-office across Hyderabad.  
+    I’m passionate about real-world learning and contributing to impactful projects.
+  </p>
+</div>
+
+
+
+  </div>
+</section>
+
+  <!-- PAGE TRANSITION SCRIPT -->
+  <script>
+    function animateAndGo(e, url) {
+      e.preventDefault();
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = url, 500);
+    }
+  </script>
+
+</body>
+</html>

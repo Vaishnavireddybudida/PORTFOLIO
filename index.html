@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            hero: "url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80')"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .link-hover {
+        @apply relative inline-block pb-1;
+      }
+      .link-hover::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-0 transition-all duration-300;
+      }
+      .link-hover:hover::after {
+        @apply w-full;
+      }
+      .link-active::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-full;
+      }
+    }
+
+    .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  }
+
+    body {
+      background-image: theme('backgroundImage.hero');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .backdrop {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(2px);
+    }
+  </style>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center px-6 md:px-20 pt-10 backdrop">
+    <div class="max-w-2xl">
+      <!-- Intro -->
+      <h2 class="text-4xl md:text-6xl font-bold">Budida Vaishnavi</h2>
+      <p class="mt-4 text-lg text-gray-200">Aspiring Java Full Stack Developer with AI</p>
+
+      <!-- Nav Links with Animated Underline -->
+      <nav class="mt-8 flex flex-wrap gap-6 text-lg font-medium">
+        <a href="index.html" class="link-hover link-active text-yellow-400">Home</a>
+        <a href="about.html" onclick="animateAndGo(event, 'about.html')" class="link-hover">About</a>
+        <a href="skills.html" onclick="animateAndGo(event, 'skills.html')" class="link-hover">Skills</a>
+        <a href="projects.html" onclick="animateAndGo(event,'projects.html')" class="link-hover">Projects</a>
+        <a href="resume.html" onclick="animateAndGo(event,'resume.html')" class="link-hover">Resume</a>
+        <a href="contact.html"  onclick="animateAndGo(event,'contact.html')" class="link-hover">Contact</a>
+      </nav>
+
+      <!-- Social Links -->
+      <div class="mt-6 flex space-x-6 text-2xl">
+        <a href="https://github.com/Vaishnavireddybudida" target="_blank" class="text-white hover:text-yellow-400 transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/budida-vaishnavi-235216308" target="_blank" class="text-white hover:text-yellow-400 transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  function animateAndGo(e, url) {
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(() => window.location.href = url, 500); // wait 500ms
+  }
+</script>
+
+
+</body>
+</html>

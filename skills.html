@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi | Skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            hero: "url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80')"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      @keyframes slideInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(60px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .slide-in {
+        animation: slideInRight 0.6s ease-out both;
+      }
+
+      .link-hover {
+        @apply relative inline-block pb-1;
+      }
+
+      .link-hover::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-0 transition-all duration-300;
+      }
+
+      .link-hover:hover::after {
+        @apply w-full;
+      }
+
+      .link-active::after {
+        content: '';
+        @apply absolute left-0 bottom-0 h-0.5 bg-yellow-400 w-full;
+      }
+    }
+
+    body {
+      background-image: theme('backgroundImage.hero');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .backdrop {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+    }
+  </style>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="text-white font-sans">
+
+  <!-- NAVIGATION BAR -->
+  <header class="backdrop px-6 md:px-20 py-6">
+    <div class="flex justify-between items-center">
+      <div class="text-xl md:text-2xl font-semibold text-white">
+        Budida Vaishnavi
+      </div>
+      <nav class="flex flex-wrap gap-6 text-lg font-medium">
+        <a href="index.html" class="link-hover">Home</a>
+        <a href="about.html" class="link-hover">About</a>
+        <a href="skills.html" class="link-hover link-active text-yellow-400">Skills</a>
+        <a href="projects.html" class="link-hover">Projects</a>
+        <a href="resume.html" class="link-hover">Resume</a>
+        <a href="contact.html" class="link-hover">Contact</a>
+      </nav>
+    </div>
+    <hr class="mt-4 border-gray-500" />
+  </header>
+
+  <!-- SKILLS SECTION -->
+  <section class="min-h-screen px-6 md:px-20 pt-10 backdrop flex items-start">
+    <div class="max-w-6xl w-full slide-in mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Left Column: Skill Names -->
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">My Skills</h2>
+        <ul class="space-y-4 text-lg text-gray-300 list-disc list-inside">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+          <li>React.js</li>
+          <li>Tailwind CSS</li>
+          <li>Java</li>
+          <li>Spring Boot</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Progress Bars -->
+      <div class="space-y-6">
+        <!-- Skill with progress -->
+        <div>
+          <p class="text-gray-200 mb-1">HTML5</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 100%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">CSS3</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">JavaScript</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 75%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">Bootstrap</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">React.js</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 75%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">Tailwind CSS</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">Java</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">Spring Boot</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 20%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-200 mb-1">MySQL</p>
+          <div class="w-full h-4 bg-gray-700 rounded">
+            <div class="h-full bg-yellow-400 rounded" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- INTERESTS SECTION -->
+<hr class="border-gray-500 mx-6 md:mx-20" />
+
+<section class="px-6 md:px-20 py-16 backdrop">
+  <!-- FULL-WIDTH HEADING -->
+  <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 slide-in">Interests</h2>
+
+  <!-- WRAPPER FOR TAGS -->
+  <div class="max-w-4xl slide-in">
+    <div class="flex flex-wrap gap-4">
+      <div class="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-medium shadow-md hover:bg-yellow-400 hover:text-black transition">
+        UI/UX Design
+      </div>
+      <div class="bg-gray-800 text-white px-6 py-3 rounded-full text-lg font-medium shadow-md hover:bg-yellow-400 hover:text-black transition">
+        Video Editing
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</body>
+</html>

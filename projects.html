@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Vaishnavi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <style type="text/tailwindcss">
+    body {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .backdrop {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+    }
+    .project-img {
+      @apply w-full h-48 object-cover rounded-t-lg;
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+
+  <!-- Navigation -->
+  <header class="backdrop px-6 md:px-20 py-6">
+    <div class="flex justify-between items-center">
+      <div class="text-xl md:text-2xl font-semibold">Budida Vaishnavi</div>
+      <nav class="flex flex-wrap gap-6 text-lg font-medium">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="skills.html" class="hover:text-yellow-400">Skills</a>
+        <a href="projects.html" class="text-yellow-400">Projects</a>
+        <a href="resume.html" class="hover:text-yellow-400">Resume</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+      </nav>
+    </div>
+    <hr class="mt-4 border-gray-500" />
+  </header>
+
+  <!-- Projects Section -->
+  <section class="backdrop px-6 md:px-20 py-12">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-12 text-center">🚀 My Projects</h2>
+
+      <div class="grid gap-10 md:grid-cols-2">
+
+        <!-- BookHub -->
+        <div class="bg-black bg-opacity-40 rounded-xl shadow-lg hover:shadow-yellow-500 transition overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?books,library" alt="BookHub" class="project-img">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">📚 BookHub</h3>
+            <p class="text-gray-200 mb-4">Full-stack book exchange platform using Spring Boot, React.js, and MySQL. Secure login, dashboard, book lending/borrowing system.</p>
+            <div class="flex gap-4">
+              <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 font-medium">🔗 View Live</a>
+              <a href="#" class="border border-yellow-400 px-4 py-2 rounded text-yellow-300 hover:bg-yellow-400 hover:text-black font-medium">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canteen Ordering System -->
+        <div class="bg-black bg-opacity-40 rounded-xl shadow-lg hover:shadow-yellow-500 transition overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?canteen,food" alt="Canteen Ordering System" class="project-img">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">🍽️ Canteen Ordering System</h3>
+            <p class="text-gray-200 mb-4">Responsive food ordering site using HTML, CSS, Bootstrap. Includes login & product catalog. Backend in Spring Boot & MySQL (in progress).</p>
+            <div class="flex gap-4">
+              <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 font-medium">🔗 View Live</a>
+              <a href="#" class="border border-yellow-400 px-4 py-2 rounded text-yellow-300 hover:bg-yellow-400 hover:text-black font-medium">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TuneWithVaish -->
+        <div class="bg-black bg-opacity-40 rounded-xl shadow-lg hover:shadow-yellow-500 transition overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?portfolio,webdesign" alt="TuneWithVaish" class="project-img">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">🎵 TuneWithVaish</h3>
+            <p class="text-gray-200 mb-4">Personal portfolio website built with HTML & Tailwind CSS. Features responsive sections, animations, and elegant UI.</p>
+            <div class="flex gap-4">
+              <a href="https://tunewithvaish.netlify.app" target="_blank" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 font-medium">🔗 View Live</a>
+              <a href="#" class="border border-yellow-400 px-4 py-2 rounded text-yellow-300 hover:bg-yellow-400 hover:text-black font-medium">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Checker -->
+        <div class="bg-black bg-opacity-40 rounded-xl shadow-lg hover:shadow-yellow-500 transition overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?quiz,logic" alt="Quiz Checker" class="project-img">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">🧠 Quiz Checker</h3>
+            <p class="text-gray-200 mb-4">JS-based puzzle game to guess 3-digit codes. Includes hint system, modals, and responsive layout.</p>
+            <div class="flex gap-4">
+              <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 font-medium">🔗 View Live</a>
+              <a href="#" class="border border-yellow-400 px-4 py-2 rounded text-yellow-300 hover:bg-yellow-400 hover:text-black font-medium">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abled Fitness -->
+       <div class="bg-black bg-opacity-40 rounded-xl shadow-lg hover:shadow-yellow-500 transition overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?disability,accessible" alt="Abled Fitness" class="project-img">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">♿ Abled Fitness Foundation Website</h3>
+            <p class="text-gray-200 mb-4">Website for NGO focused on accessibility. Built using Tailwind CSS and JS with clean responsive design.</p>
+            <div class="flex gap-4">
+              <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 font-medium">🔗 View Live</a>
+              <a href="#" class="border border-yellow-400 px-4 py-2 rounded text-yellow-300 hover:bg-yellow-400 hover:text-black font-medium">💻 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- Modal -->
+<div x-data="{ open: false, project: {} }">
+  <!-- Overlay -->
+  <div x-show="open" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4" x-cloak>
+    <!-- Modal Box -->
+    <div class="bg-white text-black max-w-lg w-full rounded-xl p-6 shadow-xl relative">
+      <!-- Close Button -->
+      <button @click="open = false" class="absolute top-3 right-4 text-black hover:text-red-600 text-2xl font-bold">&times;</button>
+
+      <!-- Modal Content -->
+      <img :src="project.image" alt="Project Image" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h2 class="text-2xl font-semibold mb-2" x-text="project.title"></h2>
+      <p class="text-gray-700 mb-4" x-text="project.description"></p>
+      <div class="flex gap-4">
+        <a :href="project.live" target="_blank" class="bg-yellow-400 px-4 py-2 rounded hover:bg-yellow-300 font-semibold">🔗 View Live</a>
+        <a :href="project.github" target="_blank" class="border border-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black font-semibold text-yellow-600">💻 GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
